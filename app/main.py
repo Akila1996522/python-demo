@@ -1,3 +1,5 @@
+"""Main application entry point for the MailBridge API using FastAPI."""
+
 from fastapi import FastAPI
 from app.routes import mailbox, auth, ws, tasks
 from starlette.middleware.cors import CORSMiddleware
@@ -30,4 +32,5 @@ app.include_router(tasks.router, prefix="/api/v1/tasks", tags=["Background Tasks
 
 @app.get("/")
 def root():
+    """Root endpoint for MailBridge API."""
     return {"message": "Welcome to MailBridge API!"}
