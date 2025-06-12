@@ -2,7 +2,7 @@ fastapi
 uvicorn
 aiosmtplib
 imaplib2
-celery=5.5.2
+celery
 slowapi
 pydantic
 email-validator
