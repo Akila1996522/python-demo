@@ -5,7 +5,10 @@ from starlette.middleware.cors import CORSMiddleware
 app = FastAPI(
     title="MailBridge API",
     version="1.0",
-    description="A powerful email management backend with real-time updates, email metadata handling, and advanced email features."
+    description=(
+        "A powerful email management backend with real-time updates, "
+        "email metadata handling, and advanced email features."
+    ),
 )
 # origins = [
 #     "https://mailbridge.echonlabs.com/"
