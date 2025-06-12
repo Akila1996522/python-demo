@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  redis:
+    container_name: redis
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    # env:
+    #   - .env
+    networks:
+      - shared
+
+
+  mailbridge:
+    container_name: mailbridge
+    image: mail-bridge-mailbridge:latest
+    restart: always
+    ports:
+      - "8002:8000"
+    environment:
+      REDIS_URL: "redis://redis:6379/"
+    networks:
+      - shared
+
+  mailbridge-celery:
+    image: mail-bridge-mailbridge:latest
+    container_name: mailbridge-celery-worker
+    restart: always
+    command: celery -A app.services.celery_worker worker --loglevel=info
+    environment:
+      REDIS_URL: "redis://redis:6379/"
+    networks:
+      - shared
+
+networks:
+  shared:
+    external: true

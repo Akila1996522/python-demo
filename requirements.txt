@@ -1,0 +1,15 @@
+fastapi
+uvicorn
+aiosmtplib
+imaplib2
+celery
+slowapi
+pydantic
+email-validator
+python-multipart
+uvicorn[standard]
+websockets
+PyJWT
+cryptography
+redis
+starlette
