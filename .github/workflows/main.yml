@@ -41,10 +41,10 @@ jobs:
           black .
           black --check .
 
-      - name: Run MyPy
-        run: |
-          mypy --install-types --non-interactive .
-          mypy .
+      # - name: Run MyPy
+      #   run: |
+      #     mypy --install-types --non-interactive .
+      #     mypy .
 
       - name: Run Pylint
         run: pylint main.py

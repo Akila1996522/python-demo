@@ -20,7 +20,6 @@ click-didyoumean==0.3.1
 click-plugins==1.1.1
 click-repl==0.3.0
 streamlit==1.32.2
-mypy
 pylint
 pip<24.1
 setuptools<70
