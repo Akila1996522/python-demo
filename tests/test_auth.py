@@ -5,6 +5,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from fastapi.testclient import TestClient
 from app.main import app
+from app.services.jwt_service import decode_jwt, decode_refresh_token
 
 client = TestClient(app)
 
