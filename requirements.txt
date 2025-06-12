@@ -14,7 +14,7 @@ cryptography
 redis
 starlette
 
-black[jupyter]==21.12b0
+black[jupyter]==24.4.2
 click==8.1.8
 click-didyoumean==0.3.1
 click-plugins==1.1.1
