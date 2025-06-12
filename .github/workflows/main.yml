@@ -47,7 +47,7 @@ jobs:
       #     mypy .
 
       - name: Run Pylint
-        run: pylint main.py
+        run: pylint app/main.py
 
 
   test:
