@@ -342,7 +342,7 @@ async def filter_emails(filter_type: str, page: int = 1, limit: int = 20, author
 async def get_unread_email_count(authorization: str = Header(...)):
     """Get the count of unread emails."""
     mailbox_token = authorization.split(" ")[1]
-    return email_service.get_unread_email_count(mailbox_token)
+    return email_service.get_unread_count(mailbox_token)
 
 ### EMAIL ATTACHMENTS ###
 @router.get("/emails/attachments/{email_id}")
