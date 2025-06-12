@@ -1,9 +1,19 @@
 import base64
-from fastapi import APIRouter, UploadFile, File, Form, HTTPException, Header
+from fastapi import (
+    APIRouter,
+    UploadFile,
+    File,
+    Form,
+    HTTPException,
+    Header,
+)
 from typing import List, Optional
 from app.services import email_service
 from app.services.jwt_service import decode_jwt
-from app.models import DraftEmail, MailboxConfig  # Add MailboxConfig to the imports
+from app.models import (
+    DraftEmail,
+    MailboxConfig,
+)  # Add MailboxConfig to the imports
 from fastapi.openapi.models import APIKey
 
 router = APIRouter()
